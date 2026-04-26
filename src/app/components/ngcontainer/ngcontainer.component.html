@@ -1,0 +1,12 @@
+<p>ngcontainer is a special angular element that can hold structural directives without adding new element to dom</p>
+<ng-container *ngIf="toggle; else toggleRef">
+    <p>The toggle is on</p>
+</ng-container>
+
+<!-- here we can't use ref varible in a div or ng-container,need to use in ng-template -->
+<ng-template #toggleRef>
+    <p>The toggle is off</p>
+</ng-template>
+
+<button (click)="updateToggle()">Toogle</button>
+<!-- Also in ng-container we can't use click (event binding) bcz element des not exist in dom ,so how can u click ,instead use in child  -->

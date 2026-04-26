@@ -1,0 +1,15 @@
+<p>ngtemplate is an angular element which wraps an HTML snippet.This snippet can act and used like a template and can be
+    rendered in DOM</p>
+
+<!-- Defining a template -->
+<ng-template #myTemplate>
+    <h2>Define a Template inside ng-template selector</h2>
+    <p>To use,first create reference variable on ng-template and use reference in ngTemplateOutlet structural directive
+    </p>
+</ng-template>
+
+<!-- Using a template,here div is not renderd on DOM ,only h2 and p will renderd -->
+<!-- <div *ngTemplateOutlet="myTemplate"></div>
+ -->
+<!-- or -->
+<ng-container *ngTemplateOutlet="myTemplate"></ng-container>
